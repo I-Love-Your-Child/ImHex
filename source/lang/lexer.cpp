@@ -135,6 +135,9 @@ namespace hex::lang {
                 } else if (c == ',') {
                     tokens.emplace_back(TOKEN(Separator, Comma));
                     offset += 1;
+                } else if (c == '.') {
+                    tokens.emplace_back(TOKEN(Separator, Dot));
+                    offset += 1;
                 } else if (c == '@') {
                     tokens.emplace_back(TOKEN(Operator, AtDeclaration));
                     offset += 1;
